@@ -20,5 +20,5 @@ class UserViewController: UIViewController {
     @IBAction func logOutButtonPressed() {
         dismiss(animated: true)
     }
-    
+  
 }
