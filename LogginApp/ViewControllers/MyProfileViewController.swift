@@ -18,19 +18,17 @@ class MyProfileViewController: UIViewController {
     @IBOutlet var avatarImageView: UIImageView!
     
     var user: User!
-    var person: PersonInfo!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = person.userName
-        firstNameLabel.text = person.name
-        secondNameLabel.text = person.surname
-        ageLabel.text = String(person.age)
+        userNameLabel.text = user.person.userName
+        firstNameLabel.text = user.person.name
+        secondNameLabel.text = user.person.surname
+        ageLabel.text = String(user.person.age)
         
-        aboutMeTV.text = person.aboutInfo
+        aboutMeTV.text = user.person.aboutInfo
         
-        avatarImageView.image = UIImage(named: person.image)
+        avatarImageView.image = UIImage(named: user.person.image)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let changeVC = segue.destination as? ChangeUserInfoViewController else { return }

@@ -18,5 +18,9 @@ class ChangeUserInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeUserNameTF.layer.cornerRadius = 15
+        changeFirstNameTF.layer.cornerRadius = 15
+        changeSecondNameTF.layer.cornerRadius = 15
+        changeAgeTF.layer.cornerRadius = 15
     }
 }

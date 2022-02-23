@@ -46,14 +46,14 @@ class ViewController: UIViewController {
             textField: passwordTextField)
         }
     }
-   // @IBAction func forgotUserInfoPressed(_ sender: UIButton) {
-    //    if  sender.tag == 0 {
-      //       shawAlert(title: "Your user name is", message: \(userName.login))
-       // } else {
-         //   shawAlert(title: "Your password is", message: \(userName.password))
-        //
-       // }
-   // }
+    @IBAction func forgotUserInfoPressed(_ sender: UIButton) {
+        if  sender.tag == 0 {
+             shawAlert(title: "Your user name is", message: userName.login)
+        } else {
+            shawAlert(title: "Your password is", message: userName.password)
+        
+        }
+   }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTextField.text = ""
